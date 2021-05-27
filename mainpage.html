@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title >TRAVELLING SALESMAN WEBSITE</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="first">
+<div class="main">
+INTRODUCTION
+</div>
+Variations of the Traveling Salesman Problem (TSP) have existed since the 1800s. Generally speaking, the problem can be stated as:
+
+<div class="space">Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?
+In essence, this question is asking us (the salesman) to visit each of the cities via the shortest path that gets us back to our origin city. We can conceptualize the TSP as a graph where each city is a node, each node has an edge to every other node, and each edge weight is the distance between those two nodes.
+</div>
+<div class="space">The first computer coded solution of TSP by Dantzig, Fulkerson, and Johnson came in the mid 1950’s with a total of 49 cities. Since then, there have been many algorithmic iterations and 50 years later, the TSP problem has been successfully solved with a node size of 24,978 cities! Multiple variations on the problem have been developed as well, such as mTSP, a generalized version of the problem and Metric TSP, a subcase of the problem.
+</div>
+<div class="space">The original Traveling Salesman Problem is one of the fundamental problems in the study of combinatorial optimization—or in plain English: finding the best solution to a problem from a finite set of possible solutions. This field has become especially important in terms of computer science, as it incorporate key principles ranging from searching, to sorting, to graph theory.
+</div>
+</div>
+<div class="second">
+	<div class="left-flex">
+	<div class="main">Real World Applications</div>
+<div class="space">However, before we dive into the nitty gritty details of TSP, we would like to present some real-world examples of the problem to illustrate its importance and underlying concepts. Applications of the TSP include:
+</div>
+<div class="space">This example uses the mTSP, or multiple traveling salesman problem: Global Navigation Satelite Systems attempt to provide coverage to all locations worldwide. Yet some locations may slip through the cracks. Here, the mTSP is used in order to survey locations along possible dead zones by placing surveyor nodes while minimizing the nodes placed and the paths connecting them.
+</div>
+</div>
+<div class="second-flex">
+<div class="parent">
+
+<ul>
+<li ><button class="warehouse">Fulfilling an order in a warehouse</button></li>
+<li><button class="circuit">Designing and building printed circuit boards</button></li>
+<li><button class="X-RAY">Analyzing an X-Ray</button></li>
+<li><button class="GPS">GPS satellite systems</button></li>
+<li><button class="bus">School bus scheduling</button></li>
+</ul>
+</div>
+<div class="second-for-text">
+<p class="main-text">
+	Click on an example to the left for more information!
+</p>
+</div>
+</div>
+</div>
+<div class="third">
+	<div class="third-first">
+<div class="space">
+<div class="main">The Naive Approach</div>
+Introduction<br>
+The Naive, or brute-force, approach computes and compares all possible permutations of paths to discover the shortest unique solution. Given n possible cities, with every city connected by a path to every other city, this results in (|V| - 1)!possible cycles.
+</div>
+<div class="space">
+We can imagine that from a starting city, there are |V| - 1 possibilities for the second city. Following this connection, the second city will then have |V| - 2possibilities, and so on and so on... 
+Since our path is bidirectional, it follows that some cycles we calculate at will be disposible as they are duplicates if reversed. Thus we arrive at (|V| - 1)!possible paths.<br>
+</div>
+As explored above, a factorial upper bound is simply far too great for real applications.
+</div>
+<div class="third-second">
+	<a href="index.html" target="_blank">GO TO VISUALIZER OF NAIVE APPROACH</a>
+</div>
+</div>
+<div class="third">
+	<div class="third-first">
+<div class="space">
+<div class="main">The Nearest Neighbour Approach</div>
+Introduction<br>
+The Nearest Neighbour Approach approach is an approximate algorithm that follows the path of the city whose distance from current vertex is minimum of all the present cities.
+</div>
+<div class="space">
+We can imagine that from a starting city, there are |V| - 1 possibilities for the second city. Out of all these we chose the city with the minimum distance from the current city and continue our path ahead.<br>
+</div>
+As explored above,this is a approximate algorithm that may or may not give the coorect ans but it provides an ans in polynomial time.
+</div>
+<div class="third-second">
+	<a href="indexing.html" target="_blank">GO TO VISUALIZER OF NEAREST NEIGHBOUR APPROACH</a>
+</div>
+</div>
+<div class="main">
+	ALGORITHM ANALYSIS
+</div>
+<div class="font-wali" >
+	Throughout the article we have introduced several different algorithms for solving the Traveling Salesman Problem. The use cases for these algorithms is primarily based on their runtime performance vs error % tradeoff. So, during this section we will compare how the algorithms compare to one another.
+</div>
+<img src="D:\Mahajan\Desktop\Untitled.png" width=50%>
+
+ <script src="jsforhome.js"></script>
+</body>
+</html>
